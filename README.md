@@ -10,9 +10,26 @@ Download source code from github:
 
 `git clone https://github.com/lnB51/rstreamer`
 
+<hr/>
+
 Build the project:
 
 `cargo buid` or `cargo buid --release`
+
+<hr/>
+
+Build for raspberry pi
+
+```cargo build --release --target aarch64-unknown-linux-gnu```
+
+You have to add `.cargo/config` file with:
+
+```rust
+[target.aarch64-unknown-linux-gnu]
+linker = "/usr/bin/aarch64-linux-gnu-gcc"
+```
+
+<hr/>
 
 Run the project:
 
